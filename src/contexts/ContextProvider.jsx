@@ -17,6 +17,9 @@ export default function ContextProvider({ children }) {
     const [user, setUser] = useState({});
     const [token, setToken] = useState(localStorage.getItem('ACCESS_TOKEN'));
     const [role, setRole] = useState(localStorage.getItem('ACCESS_ROLE'));
+
+    // const [token, setToken] = useState(123);
+    // const [role, setRole] = useState(2);
     const [notification, _setNotification] = useState('');
 
 
