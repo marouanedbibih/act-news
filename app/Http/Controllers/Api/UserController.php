@@ -32,6 +32,9 @@ class UserController extends Controller
     public function store(StoreUserRequest $request)
     {
         $data = $request->validated();
+        if (isset($data['password'])) {
+            $data['password'] = bcrypt($data['password']);
+        }
         if (isset($data['image'])) {
             $relativePath = $this->imageController->uploadImage($data['image'], 'images/users/', '-user');
             $data['image'] = $relativePath;
