@@ -5,6 +5,8 @@ import Signup from "../views/auth/Signup";
 import UserLayout from "../layouts/UserLayout";
 import User from "../views/user/User";
 import UserForm from "../views/user/UserForm";
+import MembreLayout from "../layouts/MembreLayout";
+import Portfolio from "../views/membre/Portfolio";
 
 const routes = createBrowserRouter([
     {
@@ -31,8 +33,22 @@ const routes = createBrowserRouter([
     },
     {
         path:"/",
+        element:<MembreLayout/>,
+        children: [
+            {
+                path:"/portfolio",
+                element: <Portfolio/>
+            }
+        ]
+    },
+    {
+        path:"/",
         element: <AuthLayout/>,
         children:[
+            {
+                path:'/',
+                element: <Navigate to="/login"/>
+            },
             {
                 path:"/login",
                 element:<Login/>

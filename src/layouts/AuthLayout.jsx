@@ -4,14 +4,15 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 function AuthLayout() {
   const { user, token, role } = useStateContext();
+  const roleInt = parseInt(role);
 
   if (token) {
-    if (role === 1) {
-      return <Navigate to="/users" />;
-    } else if (role === 0) {
-      return <Navigate to="/resume" />;
+    if (roleInt === 1) {
+      return <Navigate to="/portfolio" />;
+    } else if (roleInt === 0) {
+      return <Navigate to="/portfolio" />;
     }
-    else if (role === 2) {
+    else if (roleInt === 2) {
       return <Navigate to="/users" />;
     }
   }
