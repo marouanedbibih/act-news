@@ -25,7 +25,7 @@ class AuthController extends Controller
         }
     
         $data['image'] = 'images/users/default-profile.png';
-        $data['role'] = '0';
+        // $data['role'] = '0';
     
         $user = User::create($data);
         $user['role'] = '0';
