@@ -7,6 +7,7 @@ use App\Http\Controllers\Tools\ImageController;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\SignupRequest;
 use App\Http\Resources\UserResource;
+use App\Models\Membre;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,11 +15,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    // protected $imageController;
-    // public function __construct(ImageController $imageController)
-    // {
-    //     $this->imageController = $imageController;
-    // }
+
     public function signup(SignupRequest $request)
     {
         $data = $request->validated();
@@ -31,12 +28,14 @@ class AuthController extends Controller
         $data['role'] = '0';
     
         $user = User::create($data);
+        $user['role'] = '0';
+        Membre::create(['user_id' => $user->id]);
     
         $token = $user->createToken('main')->plainTextToken;
     
         return response([
             'message' => 'User added successfully',
-            'user' => new UserResource($user),
+            'user' => $user,
             'token' => $token
         ]);
     }
