@@ -22,7 +22,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::select(['id','name','email','image','role','created_at'])->orderBy('created_at', 'desc')
-        ->paginate(10);
+        ->paginate(7);
         return UserResource::collection($users);
     }
 
