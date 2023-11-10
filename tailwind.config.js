@@ -6,6 +6,7 @@ export default {
       // Colors
       colors:{
         purple:'#5B08A7',
+        primary:'#212121',
         light:'#F6F6F6',
         light_border:"#E6E6E6",
         light_gray:'#B3B3B3',

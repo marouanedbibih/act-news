@@ -17,7 +17,7 @@ function UserLayout() {
       <div className="flex flex-col flex-1 overflow-hidden">
         <Navbar />
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 flex items-centre justify-end mt-20">
-          <div style={{ width: "calc(100vw - 240px)" }} className="px-8 py-4 h-[3000px]">
+          <div style={{ width: "calc(100vw - 240px)" }} className="px-16 py-4 h-auto">
             <Outlet />
           </div>
         </main>

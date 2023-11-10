@@ -66,7 +66,7 @@ function Signup() {
                 Full Name
               </div>
               <input
-                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-purple focus:transition"
+                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-primary focus:transition"
                 placeholder="Entre your name"
                 type="text"
                 ref={nameRef}
@@ -80,7 +80,7 @@ function Signup() {
                 Email
               </div>
               <input
-                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-purple focus:transition"
+                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-primary focus:transition"
                 placeholder="name@example.com"
                 type="email"
                 ref={emailRef}
@@ -94,7 +94,7 @@ function Signup() {
                 Password
               </div>
               <input
-                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-purple focus:transition"
+                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-primary focus:transition"
                 placeholder="Entre you password"
                 type="password"
                 ref={passwordRef}
@@ -109,7 +109,7 @@ function Signup() {
                 Password Confirmation
               </div>
               <input
-                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-purple focus:transition"
+                className="self-stretch h-10 p-4 py-3 bg-white bg-opacity-0 rounded-lg border border-gray-300 justify-start items-center gap-2.5 inline-flex outline outline-0 focus:border-2 focus:border-primary focus:transition"
                 placeholder="Entre you password confirmation"
                 type="password"
                 ref={passwordConfirmationRef}
@@ -117,7 +117,7 @@ function Signup() {
             </div>
           </div>
         </div>
-        <button className="self-stretch px-[18px] py-2.5 bg-violet-800 rounded-lg shadow justify-center items-center gap-2 inline-flex hover:bg-violet-700 active:bg-violet-900">
+        <button className="self-stretch px-[18px] py-2.5 bg-primary rounded-lg shadow justify-center items-center gap-2 inline-flex hover:bg-violet-700 active:bg-violet-900">
           <div className="text-white text-sm font-bold font-['Roboto'] uppercase leading-[21px]">
             Sign Up
           </div>
@@ -125,7 +125,7 @@ function Signup() {
         <p class=" block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
           Already have an account? {" "}
           <Link
-            class="font-medium text-purple transition-colors hover:text-blue-700"
+            class="font-medium text-primary transition-colors hover:text-blue-700"
             to="/login"
           >
              Sign In

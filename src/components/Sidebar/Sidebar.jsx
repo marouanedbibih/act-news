@@ -16,7 +16,7 @@ function Sidebar() {
   };
 
   return (
-    <aside className="w-60 bg-purple px-4 h-screen fixed z-10">
+    <aside className="w-60 bg-gray-800 px-4 h-screen fixed z-10">
       <div className="h-20 flex items-center">
         <div className="text-white text-lg font-bold font-['Roboto'] leading-normal">
           Dashboard
